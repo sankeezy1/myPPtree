@@ -5,13 +5,20 @@
 #include <unordered_map>
 #include <vector>
 
-template <class T>
-class myPP {
+class myPP 
+{
+
+private:
+
+    std::unordered_map<int, int> data;
+    std::unordered_map<int, int> rank;
 
 public:
-    std::unordered_map<int, T> data;
+
+    myPP() {}
+    ~myPP() {}
     int Find(int key);
     void Union(int key1, int key2);
-    void create(std::vector<T> const& set);
+    void create(std::vector<int> const& set);
 
 };

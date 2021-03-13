@@ -4,28 +4,48 @@
 
 #include "myPP.hpp"
 
-template <class T>
-int myPP<T>::Find(int key) {
+int myPP::Find(int key)
+{
 
-    if (data[key] == key){
-        return key;
+    if (data[key] != key)
+    {
+        data[key] = Find(data[key]);
     }
 
-    return find(data[key]);
+    return data[key];
 }
 
-template <class T>
-void myPP<T>::Union(int key1, int key2) {
-
+void myPP::Union(int key1, int key2)
+{
+    // Find roots
     int x = Find(key1);
     int y = Find(key2);
 
-    data[x] = y;
+    if (x == y)
+    {
+        return;
+    }
+
+    if (rank[x] > rank[y])
+    {
+        data[y] = x;
+    }
+    else if (rank[x] < rank[y])
+    {
+        data[x] = y;
+    }
+    else
+    {
+        data[x] = y;
+        rank[y]++;
+    }
 }
 
-template <class T>
-void myPP<T>::create(std::vector<T> const& set) {
-    for (int i: set) {
-        set[i] = i;
+void myPP::create(std::vector<int> const& set)
+{
+    for (int i: set)
+    {
+        data[i] = i;
+        rank[i] = 0;
     }
 }
