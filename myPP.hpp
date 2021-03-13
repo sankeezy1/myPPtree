@@ -11,7 +11,6 @@ class myPP
 private:
 
     std::unordered_map<int, int> data; // nodes and information in the tree as a hash map
-    std::unordered_map<int, int> depth; // rank/depth of the tree
 
 public:
 
