@@ -16,22 +16,22 @@ void myPP::create(std::vector<int> const& set)
     }
 }
 
-int myPP::Find(int key)
+int myPP::Find(int element)
 {
-    // if key is found
-    if (data[key] == key)
+    // if element is found
+    if (data[element] == element)
     {
-        return key;
+        return element;
     }
 
-    return Find(data[key]); // recursion to find key
+    return Find(data[element]); // recursion to find element
 }
 
-void myPP::Union(int key1, int key2)
+void myPP::Union(int element1, int element2)
 {
     // Find roots
-    int x = Find(key1);
-    int y = Find(key2);
+    int x = Find(element1);
+    int y = Find(element2);
 
     data[x] = y;
 }
