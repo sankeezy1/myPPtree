@@ -3,6 +3,7 @@
 */
 
 #include "myPP.hpp"
+#include <iostream>
 
 // use a vector
 // ex: vector<int> set(100); set of 100 nodes all 0's 
@@ -27,14 +28,14 @@ int myPP::Find(int element)
         data[element] = Find(data[element]);
     }
 
-    return data[key];
+    return data[element];
 }
 
 void myPP::Union(int element1, int element2)
 {
     // Find roots
-    int x = Find(key1);
-    int y = Find(key2);
+    int x = Find(element1);
+    int y = Find(element2);
 
     // if they are from the same root, return
     if (x == y)
