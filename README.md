@@ -1,5 +1,10 @@
 # myPPtree
-A parent pointer tree as a C++ class for data structures project 2
+A parent pointer tree as a C++ class for data structures project 2.
+
+Main branch has path compression/weighted union.
+
+Naive branch doesn't have these optimizations.
+
 
 create(vector) makes a parent pointer tree where each node is corresponding to each element in the vector.
 
