@@ -80,5 +80,3 @@ void myPP::Union(int element1, int element2)
         depth[y]++;
     }
 }
-
-
