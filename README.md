@@ -6,7 +6,7 @@ Main branch has path compression/weighted union.
 Naive branch doesn't have these optimizations.
 
 
-create(vector) creates a parent pointer tree where each node is corresponding to each element in the vector.
+create(NODES) creates a parent pointer tree with number of nodes of amount NODES
 
 Find(element) given an element, return the root. This can be optimized with path compression.
 

@@ -17,5 +17,4 @@ public:
     int Find(int element); // find the parent of the element
     void Union(int element1, int element2); // merge two disjoint sets together given two elements
     void create(int size); // create a parent pointer tree given a set/vector
-
 };
