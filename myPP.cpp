@@ -1,19 +1,41 @@
 /*
-    My data Pointer implementation file
+    My parent Pointer implementation file
 */
 
 #include "myPP.hpp"
+#include <iostream>
 
-// use a vector
-// ex: vector<int> set(100); set of 100 nodes all 0's
-// ex: vector<int> set = {1, 2, 3, 4}; make a set of 4 nodes numbered as node 1, node 2,... etc
+// create array of size 'size'
 // set depth of each node to 0 (default depth of a node/single-element set)
-void myPP::create(std::vector<int> const& set)
+
+myPP::myPP(int size)
 {
-    for (int i: set)
+    parent = new int[size];
+    depth = new int[size];
+
+    for (int i = 0; i < size; i++)
     {
-        data[i] = i;
+        parent[i] = i;
+        depth[i] = 0;
     }
+}
+
+// destructor
+myPP::~myPP()
+{
+    if (parent != nullptr && depth != nullptr)
+    {
+        delete [] parent;
+        parent = nullptr;
+        delete [] depth;
+        depth = nullptr;
+    }
+}
+
+void myPP::create(int size)
+{
+    parent = new int[size];
+    depth = new int[size];
 }
 
 int myPP::Find(int element)
@@ -35,5 +57,3 @@ void myPP::Union(int element1, int element2)
 
     data[x] = y;
 }
-
-
