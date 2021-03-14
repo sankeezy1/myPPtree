@@ -5,9 +5,10 @@ Main branch has path compression/weighted union.
 
 Naive branch doesn't have these optimizations.
 
+constructor(int) given an int creates a set of nodes
 
-create(NODES) creates a parent pointer tree with number of nodes of amount NODES
+.create(int) given an int creates a set of nodes
 
-Find(element) given an element, return the root. This can be optimized with path compression.
+.Find(int) given an element, return the root. This can be optimized with path compression.
 
-Union(element1, element2) given two elements, make them part of the same disjointed-set/tree. This can be optimized with union by weight.
+.Union(int1, int2) given two elements, make them part of the same disjointed-set/tree. This can be optimized with union by weight.
