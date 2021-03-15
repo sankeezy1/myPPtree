@@ -1,4 +1,4 @@
-#ifndef
+#ifndef MYPP_HPP
 #define MYPP_HPP
 
 /*
