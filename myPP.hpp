@@ -1,3 +1,6 @@
+#ifndef
+#define MYPP_HPP
+
 /*
     My Parent Pointer declaration file
 */
@@ -18,3 +21,5 @@ public:
     void Union(int element1, int element2); // merge two disjoint sets together given two elements
     void create(int size); // create a parent pointer tree given a set/vector
 };
+
+#endif
