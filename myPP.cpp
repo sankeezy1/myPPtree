@@ -41,12 +41,12 @@ void myPP::create(int size)
 int myPP::Find(int element)
 {
     // if element is found
-    if (data[element] == element)
+    if (parent[element] == element)
     {
         return element;
     }
 
-    return Find(data[element]); // recursion to find element
+    return Find(parent[element]); // recursion to find element
 }
 
 void myPP::Union(int element1, int element2)
@@ -55,5 +55,5 @@ void myPP::Union(int element1, int element2)
     int x = Find(element1);
     int y = Find(element2);
 
-    data[x] = y;
+    parent[x] = y;
 }
